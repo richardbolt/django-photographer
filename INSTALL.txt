@@ -1,0 +1,18 @@
+
+
+Dependencies:
+pil (python_imaging)
+django-mptt
+django-haystack (developed with 2.0 beta)
+Whoosh
+feincms
+feincms form_designer
+feincms elephantblog
+markdown
+django-markupmirror
+
+
+Notes:
+jQuery Horizontal Scroller: http://manos.malihu.gr/jquery-custom-content-scroller/
+
+Feincms and haystack: https://groups.google.com/forum/?fromgroups=#!topic/django-feincms/ZzRjhaJdgXI

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div id="search-wrapper">
+        <div id="search">
+            <h1>Search {% if query %}Results for &#8220;{{ query }}&#8221;{% else %}for {{ RB_SITE_TITLE }}{% endif %}</h1>
+            <p>Tip: Adjust your search terms in the box on the top right of the page.</p>
+            {% if query %}
+                <h3>Results</h3>
+            
+                <ul>
+                {% for result in page.object_list %}
+                    <li><a href="{{ result.object.get_absolute_url }}">{{ result.object.title }}</a></li>
+                {% empty %}
+                    <li>No results found.</li>
+                {% endfor %}
+                </ul>
+
+                {% if page.has_previous or page.has_next %}
+                    <div>
+                        {% if page.has_previous %}<a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">{% endif %}&laquo; Previous{% if page.has_previous %}</a>{% endif %}
+                        |
+                        {% if page.has_next %}<a href="?q={{ query }}&amp;page={{ page.next_page_number }}">{% endif %}Next &raquo;{% if page.has_next %}</a>{% endif %}
+                    </div>
+                {% endif %}
+            {% else %}
+                {# Show some example queries to run, maybe query syntax, something else? #}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

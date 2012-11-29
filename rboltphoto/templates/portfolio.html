@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block summary %} - {{ summary }}{% endblock summary %}
+{% block meta_description %}{% endblock meta_description %}
+    
+    
+{% block js %}
+<script type="text/javascript">
+    {# for the portfolio page #}
+    (function($){
+        $(window).load(function(){
+            $("#portfolio").mCustomScrollbar({
+                horizontalScroll:true,
+                scrollButtons:{
+                    enable:true,
+                    scrollType:"pixels",
+                    scrollAmount:500
+                },
+                advanced:{
+                    updateOnBrowserResize: false
+                },
+                callbacks:{
+                    onScroll:function(){
+                        snapScrollbar();
+                    }
+                }
+            });
+            /* toggle buttons scroll type */
+            $("a[rel='toggle-buttons-scroll-type']").click(function(e){
+                e.preventDefault();
+                var $this=$(this);
+                var cont=$("#portfolio");
+                var scrollType;
+                if(cont.data("scrollButtons-scrollType")==="pixels"){
+                    scrollType="continuous";
+                }else{
+                    scrollType="pixels";
+                }
+                cont.data({"scrollButtons-scrollType":scrollType}).mCustomScrollbar("update");
+                $this.toggleClass("off");
+            });
+            /* snap scrollbar fn */
+            var snapTo=[];
+            $("#portfolio .images_container img").each(function(){
+                var $this=$(this);
+                var thisX=$this.position().left;
+                snapTo.push(thisX);
+            });
+            function snapScrollbar(){
+                if(!$(document).data("mCS-is-touch-device")){ //no snapping for touch devices
+                    var posX=$("#portfolio .mCSB_container").position().left;
+                    var closestX=findClosest(Math.abs(posX),snapTo);
+                    if(closestX===0){
+                        $("#portfolio").mCustomScrollbar("scrollTo","left",{
+                            callback:false //scroll to is already a callback fn
+                        });
+                    }else{
+                        $("#portfolio").mCustomScrollbar("scrollTo",closestX,{
+                            callback:false //scroll to is already a callback fn
+                        });
+                    }
+                }
+            }
+            function findClosest(num,arr){
+                var curr=arr[0];
+                var diff=Math.abs(num-curr);
+                for(var val=0; val<arr.length; val++){
+                    var newdiff=Math.abs(num-arr[val]);
+                    if(newdiff<diff){
+                        diff=newdiff;
+                        curr=arr[val];
+                    }
+                }
+                return curr;
+            }
+        });
+    })(jQuery);
+</script>
+{% endblock js %}
+
+
+{% block content %}
+{# for the portfolio pages #}
+<div id="portfolio">
+    <div class="images_container">
+        {% for content in feincms_page.content.main %}
+            {{ content.render }}
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

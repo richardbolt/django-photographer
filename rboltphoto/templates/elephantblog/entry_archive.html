@@ -1,0 +1,69 @@
+{% extends feincms_page.template.path|default:"blog.html" %}
+{% load feincms_tags i18n %}
+
+{% block title %}{% trans "Blog" %} {% if category %}for {{ category }}{% endif %}{% if year %}for {{ year }}{% endif %}{% if month %}for {{ month|date:"F Y" }}{% endif %}{% endblock %}
+
+{% block content %}
+{% block content_title %}
+<h1>
+    {% if category or year or month or day %}{% trans "Blog Entries" %}{% endif %}
+    {% if category %}for {{ category }}{% endif %}
+    {% if year %}for {{ year }}{% endif %}
+    {% if month %}for {{ month|date:"F, Y" }}{% endif %}
+    {% if day %}for {{ day|date:"DATE_FORMAT" }}{% endif %}
+</h1>
+<p class="feed-link"><a href="{{ RB_BLOG_RSS_URL }}">RSS FEED</a></p>
+{% endblock %}
+
+{% block object_list %}
+<div class="hfeed newsfeed">
+{% for entry in object_list %}
+    <article class="hentry{% if forloop.first %} first{% endif %}">
+        <header>
+            <h2 class="entry-title"><a href="{{ entry.get_absolute_url }}" rel="bookmark">{{ entry }}</a></h2>
+            <span class="byline small">
+                {% if entry.author.get_full_name %}
+                <span class="author source-org vcard">
+                    {% trans 'by' %} <span class="fn">{{ entry.author.get_full_name }}</span> |
+                </span>
+                {% endif %}
+                <time datetime="{{ entry.published_on|date:'c' }}" pubdate>{{ entry.published_on|date:"DATE_FORMAT" }}</time>
+                {% with entry.fetched_categories as categories %}
+                {% if categories %}|
+                {% for category in categories %}
+                    <a href="{{ category.get_absolute_url }}" rel="tag">{{ category }}</a>{% if not forloop.last %},{% endif %}
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+            </span>
+        </header>
+        <div class="entry-content">
+            {% feincms_render_region entry "main" request %}
+        </div>
+    </article>
+{% endfor %}
+</div>
+{% endblock %}
+
+{% block pagination %}
+<div class="pagination">
+    {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}">&laquo; Previous</a>
+    {% endif %}
+    
+    {% if page_obj.has_next or page_obj.has_previous %}
+    {% for p in page_obj.page_range|default_if_none:page_obj.paginator.page_range %}
+        {% if not p %}&hellip;
+        {% else %}
+            <a {% if p == page_obj.number and not page_obj.show_all_objects %}class="mark"{% endif %} href="?page={{ p }}">{{ p }}</a>
+        {% endif %}
+    {% endfor %}
+    {% endif %}
+
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">Next &raquo;</a>
+    {% endif %}
+</div>
+{% endblock %}
+{% endblock %}
+

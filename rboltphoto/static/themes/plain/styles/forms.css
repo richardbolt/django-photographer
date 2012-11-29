@@ -1,0 +1,6 @@
+input, textarea { font-family: 'OxygenMonoRegular', menlo, 'andale mono', 'courier new', sans-serif; font-size: 80%; text-shadow: rgba(255, 255, 255, 0.898438) 1px 1px 0px; font-size: 1.2em; width: 100%; padding: 5px; border: none; border-bottom: 1px solid #b5a58d; background-color: #f9f7f4; }
+
+textarea { height: 2.5em; min-height: 2.5em; }
+
+input[type=submit] { width: auto; border: 1px solid transparent; color: #b5a58d; background: #f2e9da; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; text-transform: uppercase; padding-left: 10px; padding-right: 10px; }
+input[type=submit]:hover { color: #cc9a50; border: 1px solid #cc9a50; cursor: pointer; }

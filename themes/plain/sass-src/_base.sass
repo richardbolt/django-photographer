@@ -1,0 +1,71 @@
+//-------------------------------
+//    Base css settings for WCBC.
+
+!blueprint_grid_columns = 25
+!blueprint_grid_width = 30px
+!blueprint_grid_margin = 10px
+
+@import blueprint/modules/fancy_type.sass
+@import blueprint/modules/grid.sass
+@import blueprint/modules/interaction.sass
+
+
+@import _border-radius.sass
+//@import forms.sass
+
+//--------------------------
+//    Border radius defaults
+
+!border_radius = 5px
+
+//--------------------
+//    widths & heights
+
+!main_width = 1200px
+!slide_height = 550px
+!contact_main_width = !main_width - 500px
+!contact_sidebar_width = !main_width - !contact_main_width
+
+//---------------------
+//    Background Colors
+
+!background_color = #f9f7f4
+!background_color_nav_submenu = rgba(249, 247, 244, 0.8)
+!background_button = #f2e9da
+
+!content_color = #f9f7f4
+!panel_color = #E7E7E6
+!footer_color = #f9f7f4
+
+// From blueprint
+!success_bg_color = #E6EFC2
+!success_border_color = #C6D880
+!notice_bg_color = #FFF6BF
+!notice_border_color = #FFD324
+!error_bg_color = #FBE3E4
+!error_border_color = #FBC2C4
+
+//------------
+// Text colors
+!text_color = #C7B79F
+!link_color = #B5A58D
+!link_hover_color = #cc9a50
+
+// From blueprint
+!success_color = #264409
+!notice_color = #514721
+!error_color = #8a1f11
+
+//-----------------
+//    Custom Mixins
+=fontfamily(!size = 80%)
+    font-family: 'OxygenMonoRegular', menlo, 'andale mono', 'courier new', sans-serif
+    font-size= !size
+    text-shadow: rgba(255, 255, 255, 0.898438) 1px 1px 0px
+
+=panel(!padding=true)
+    @if !padding
+        padding= !outer_radius
+    background-color= !panel_color
+    +border-radius(!inner_radius)
+    

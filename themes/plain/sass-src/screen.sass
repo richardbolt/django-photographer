@@ -1,0 +1,243 @@
+/*
+    RICHARD BOLT main stylesheet
+
+@import compass/reset.sass
+
+@import base.sass
+
+
+body
+    text-align: center
+    margin-top: 0px
+    background-color= !background_color
+    color= !text_color
+    top: 2px
+    +fontfamily
+    
+    // Base Font Sizes
+    line-height: 1.2em
+    
+    h1
+        font-size: 1.5em
+        margin: 1em 0 .5em
+    h2
+        font-size: 1.4em
+        margin: 1.07em 0 .535em
+    h3
+        font-size: 1.3em
+        margin: 1.14em 0 .57em
+    h4
+        font-size: 1.2em
+        margin: 1.23em 0 .615em
+    h5
+        font-size: 1.1em
+        margin: 1.33em 0 .67em
+    h6
+        font-size: 1em
+        margin: 1.6em 0 .8em
+    
+    hr, p, ul, ol, address, table
+        margin-bottom: 1.6em
+
+a
+    &:link
+        color= !link_color
+    &:visited
+        color= !link_color
+    &:hover
+        color= !link_hover_color
+
+strong
+    font-weight: bolder
+em
+    font-style: italic
+
+
+nav
+    width= !main_width
+    height: 29px
+    margin:
+        top: 14px
+        left: auto
+        right: auto  
+        bottom: 14px
+    a
+        text-decoration: none
+    .expanded
+        left: auto
+    form
+        float: right
+        label
+            text-transform: uppercase
+            font-size: 1.8em
+            line-height: 1.3em
+        input[type=text]
+            width: 150px
+            padding:
+                top: 2px
+                bottom: 2px
+        input
+            margin:
+                top: 0px
+                bottom: 0px
+                right: 0px
+    ul
+        z-index: 10
+        text-align: left
+        text-transform: uppercase
+        margin: 0
+        li
+            float: left
+            display: block
+            font-size: 1.8em
+            line-height: 1.3em
+            a
+                margin:
+                    left: 20px
+                    right: 20px
+                &.active
+                    color= !link_hover_color
+                &:link.hover
+                    color= !link_hover_color
+            ul
+                display: none
+                z-index: 10
+                position: absolute
+                width: auto
+                margin-bottom: 0
+                background-color= !background_color_nav_submenu
+                li
+                    font-size: 0.8em
+                    margin-left: 0
+                    float: none
+                    display: inline
+                    ul
+                        margin-bottom: 0
+                        li
+                            margin:
+                                left: 0
+                                bottom: !border_radius
+                                top= !border_radius
+                            float: none
+                            display: block
+                            &:last-of-type
+                                padding-bottom= !border_radius
+
+#content
+    min-height= !slide_height
+    #slides
+        margin: auto
+        width= !main_width
+        height= !slide_height
+        overflow: hidden
+        +border-radius(!border_radius)
+        background-color= !background_color
+        .slide_container
+            height= !slide_height
+            width= !main_width
+            +border-radius(!border_radius)
+            img
+                width: 100%
+                +border-radius(!border_radius)
+    
+    #portfolio
+        margin: auto
+        width= !main_width
+        height= !slide_height
+        overflow-y: hidden
+        +border-radius(!border_radius)
+        .images_container
+            +border-radius(!border_radius)
+            img
+                height= !slide_height
+                +border-radius(!border_radius)
+                margin-right= !border_radius
+                &:last-of-type
+                    margin-right: 0
+    
+    #contact
+        margin: auto
+        clear: both
+        height: auto
+        width= !main_width
+        .contact-main
+            text-transform: uppercase
+            width= !contact_main_width
+            float: left
+            margin-bottom: 29px
+        .contact-sidebar
+            width= !contact_sidebar_width
+            float: left
+            margin-bottom: 29px
+            img 
+                width: 100%
+                +border-radius(!border_radius)
+    
+
+    // blog
+    .hfeed.newsfeed, .hentry
+        margin: auto
+        width= !main_width
+        header
+            text-align: left
+            h2, h1
+                &.entry-title
+                    margin:
+                        top: 0
+                        bottom: 0
+                        right: 1em
+                        left: 20px
+                    float: left
+                a
+                    color= !link_hover_color
+            margin:
+                top: 2em
+                bottom: 1em
+        .entry-content
+            clear: both
+            img
+                +border-radius(!border_radius)
+                max-width= !main_width
+            iframe
+                +border-radius(!border_radius)
+    
+    #search-wrapper
+        margin: auto
+        width= !main_width
+        #search
+            text-align: left
+            padding:
+                left: 20px
+                right: 20px
+            h1
+                text-transform: uppercase
+            ul
+                li
+                    padding:
+                        top= !border_radius
+                        bottom= 2 * !border_radius
+                    a
+                        font-size: 1.2em
+                        color= !link_hover_color
+                
+
+footer
+    clear: both
+    width= !main_width
+    height: 29px
+    margin: auto
+    a
+        text-decoration: none
+    ul
+        text-align: left
+        text-transform: uppercase
+        li
+            float: left
+            display: block
+            margin:
+                left: 20px
+                right: 20px
+            &:first-of-type
+                margin-right: 800px
+ 
+        

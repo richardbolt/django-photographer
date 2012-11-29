@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load feincms_tags %}
+
+{% block summary %} - {{ summary }}{% endblock summary %}
+{% block meta_description %}{% endblock meta_description %}
+    
+    
+{% block js %}
+<script type="text/javascript">
+    {# for the home page #}
+    (function($){
+        $(document).ready(function(){
+            $('#slides .slide_container').cycle('fade');
+        });
+    })(jQuery);
+</script>
+{% endblock js %}
+
+
+{% block content %}
+<div id="contact">
+    <div class="contact-main">
+        {% for content in feincms_page.content.main %}
+            {% feincms_render_content content request %}
+        {% endfor %}
+    </div>
+    <div class="contact-sidebar">
+        {% for content in feincms_page.content.sidebar %}
+            {{ content.render }}
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

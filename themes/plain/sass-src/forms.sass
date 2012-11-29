@@ -1,0 +1,29 @@
+@import base.sass
+
+input, textarea
+    +fontfamily
+    font-size: 1.2em
+    width: 100%
+    padding= !border_radius
+    border: none
+    border-bottom= 1px "solid" !link_color
+    background-color= !background_color
+
+textarea
+    height: 2.5em
+    min-height: 2.5em
+    
+input[type=submit]
+    width: auto
+    border: 1px solid transparent
+    color= !link_color
+    background= !background_button
+    +border-radius(!border_radius)
+    text-transform: uppercase
+    padding:
+        left= 2 * !border_radius
+        right= 2 * !border_radius
+    &:hover
+        color= !link_hover_color
+        border= 1px "solid" !link_hover_color
+        cursor: pointer

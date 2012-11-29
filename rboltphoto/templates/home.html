@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block summary %} - {{ summary }}{% endblock summary %}
+{% block meta_description %}{% endblock meta_description %}
+    
+    
+{% block js %}
+<script type="text/javascript">
+    {# for the home page #}
+    (function($){
+        $(document).ready(function(){
+            $('#slides .slide_container').cycle('fade');
+        });
+    })(jQuery);
+</script>
+{% endblock js %}
+
+
+{% block content %}
+{# for the home page or pages with fading full width media content only #}
+<div id="slides">
+    <div class="slide_container">
+        {% for content in feincms_page.content.main %}
+            {{ content.render }}
+        {% endfor %}
+    </div
+</div>
+{% endblock content %}

@@ -1,0 +1,16 @@
+Django==1.4.2
+FeinCMS==1.6.3
+Markdown==2.2.1
+MySQL-python==1.2.4c1
+PIL==1.1.7
+boto==2.6.0
+distribute==0.6.31
+-e git+https://github.com/toastdriven/django-haystack.git@58f4eddbf1044a2a5663de470301c0af7a957b13#egg=django_haystack-dev
+django-markupmirror==0.1c1
+django-mptt==0.5.4
+django-s3-folder-storage==0.1
+django-storages==1.1.5
+feincms-elephantblog==0.3.0
+form-designer==0.1.0.pre
+gunicorn==0.16.1
+wsgiref==0.1.2

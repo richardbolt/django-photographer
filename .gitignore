@@ -1,0 +1,6 @@
+venv
+.env
+*.pyc
+.sass-cache
+mediafiles
+.hg

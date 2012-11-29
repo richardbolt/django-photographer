@@ -1,0 +1,84 @@
+/* RICHARD BOLT main stylesheet */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; }
+
+*:focus { outline: 0; }
+
+body { line-height: 1em; color: black; background: #fff; }
+
+ol, ul { list-style: none; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table { border-collapse: separate; border-spacing: 0; vertical-align: middle; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: "" ""; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; }
+
+img a { border: none; }
+
+body { text-align: center; margin-top: 0px; background-color: #f9f7f4; color: #c7b79f; top: 2px; font-family: 'OxygenMonoRegular', menlo, 'andale mono', 'courier new', sans-serif; font-size: 80%; text-shadow: rgba(255, 255, 255, 0.898438) 1px 1px 0px; line-height: 1.2em; }
+body h1 { font-size: 1.5em; margin: 1em 0 .5em; }
+body h2 { font-size: 1.4em; margin: 1.07em 0 .535em; }
+body h3 { font-size: 1.3em; margin: 1.14em 0 .57em; }
+body h4 { font-size: 1.2em; margin: 1.23em 0 .615em; }
+body h5 { font-size: 1.1em; margin: 1.33em 0 .67em; }
+body h6 { font-size: 1em; margin: 1.6em 0 .8em; }
+body hr, body p, body ul, body ol, body address, body table { margin-bottom: 1.6em; }
+
+a:link { color: #b5a58d; }
+a:visited { color: #b5a58d; }
+a:hover { color: #cc9a50; }
+
+strong { font-weight: bolder; }
+
+em { font-style: italic; }
+
+nav { width: 1200px; height: 29px; margin-top: 14px; margin-left: auto; margin-right: auto; margin-bottom: 14px; }
+nav a { text-decoration: none; }
+nav .expanded { left: auto; }
+nav form { float: right; }
+nav form label { text-transform: uppercase; font-size: 1.8em; line-height: 1.3em; }
+nav form input[type=text] { width: 150px; padding-top: 2px; padding-bottom: 2px; }
+nav form input { margin-top: 0px; margin-bottom: 0px; margin-right: 0px; }
+nav ul { z-index: 10; text-align: left; text-transform: uppercase; margin: 0; }
+nav ul li { float: left; display: block; font-size: 1.8em; line-height: 1.3em; }
+nav ul li a { margin-left: 20px; margin-right: 20px; }
+nav ul li a.active { color: #cc9a50; }
+nav ul li a:link.hover { color: #cc9a50; }
+nav ul li ul { display: none; z-index: 10; position: absolute; width: auto; margin-bottom: 0; background-color: rgba(249, 247, 244, 0.8); }
+nav ul li ul li { font-size: 0.8em; margin-left: 0; float: none; display: inline; }
+nav ul li ul li ul { margin-bottom: 0; }
+nav ul li ul li ul li { margin-left: 0; margin-bottom: !border_radius; margin-top: 5px; float: none; display: block; }
+nav ul li ul li ul li:last-of-type { padding-bottom: 5px; }
+
+#content { min-height: 550px; }
+#content #slides { margin: auto; width: 1200px; height: 550px; overflow: hidden; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; background-color: #f9f7f4; }
+#content #slides .slide_container { height: 550px; width: 1200px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+#content #slides .slide_container img { width: 100%; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+#content #portfolio { margin: auto; width: 1200px; height: 550px; overflow-y: hidden; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+#content #portfolio .images_container { border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+#content #portfolio .images_container img { height: 550px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; margin-right: 5px; }
+#content #portfolio .images_container img:last-of-type { margin-right: 0; }
+#content #contact { margin: auto; clear: both; height: auto; width: 1200px; }
+#content #contact .contact-main { text-transform: uppercase; width: 700px; float: left; margin-bottom: 29px; }
+#content #contact .contact-sidebar { width: 500px; float: left; margin-bottom: 29px; }
+#content #contact .contact-sidebar img { width: 100%; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+#content .hfeed.newsfeed, #content .hentry { margin: auto; width: 1200px; }
+#content .hfeed.newsfeed header, #content .hentry header { text-align: left; margin-top: 2em; margin-bottom: 1em; }
+#content .hfeed.newsfeed header h2.entry-title, #content .hfeed.newsfeed header h1.entry-title, #content .hentry header h2.entry-title, #content .hentry header h1.entry-title { margin-top: 0; margin-bottom: 0; margin-right: 1em; margin-left: 20px; float: left; }
+#content .hfeed.newsfeed header h2 a, #content .hfeed.newsfeed header h1 a, #content .hentry header h2 a, #content .hentry header h1 a { color: #cc9a50; }
+#content .hfeed.newsfeed .entry-content, #content .hentry .entry-content { clear: both; }
+#content .hfeed.newsfeed .entry-content img, #content .hentry .entry-content img { border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; max-width: 1200px; }
+#content .hfeed.newsfeed .entry-content iframe, #content .hentry .entry-content iframe { border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+#content #search-wrapper { margin: auto; width: 1200px; }
+#content #search-wrapper #search { text-align: left; padding-left: 20px; padding-right: 20px; }
+#content #search-wrapper #search h1 { text-transform: uppercase; }
+#content #search-wrapper #search ul li { padding-top: 5px; padding-bottom: 10px; }
+#content #search-wrapper #search ul li a { font-size: 1.2em; color: #cc9a50; }
+
+footer { clear: both; width: 1200px; height: 29px; margin: auto; }
+footer a { text-decoration: none; }
+footer ul { text-align: left; text-transform: uppercase; }
+footer ul li { float: left; display: block; margin-left: 20px; margin-right: 20px; }
+footer ul li:first-of-type { margin-right: 800px; }

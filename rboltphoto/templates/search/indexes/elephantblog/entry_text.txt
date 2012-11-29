@@ -1,0 +1,5 @@
+{{ object.title }}
+{{ object.user.get_full_name }}
+{% for content in object.content.main %} 
+{{ content.render|striptags }}
+{% endfor %}
