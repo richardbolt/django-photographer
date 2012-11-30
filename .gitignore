@@ -3,4 +3,5 @@ venv
 *.pyc
 .sass-cache
 mediafiles
+whoosh_index
 .hg
