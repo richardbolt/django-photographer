@@ -1,15 +1,12 @@
+Installation
+
+This app is designed for easy deployment with Heroku so you can be up and
+running with a functional app very quickly.
 
 
 Dependencies:
-pil (python_imaging)
-django-mptt
-django-haystack (developed with 2.0 beta)
-Whoosh
-feincms
-feincms form_designer
-feincms elephantblog
-markdown
-django-markupmirror
+
+See requirements.txt
 
 
 Notes:
