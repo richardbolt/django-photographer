@@ -1,4 +1,4 @@
-# Django settings for rboltphoto project - deployment with Heroku.
+# Django settings for django-photographer - deployment with Heroku.
 import os
 import sys
 import urlparse
@@ -127,10 +127,10 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'rboltphoto.urls'
+ROOT_URLCONF = 'photographer.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'rboltphoto.wsgi.application'
+WSGI_APPLICATION = 'photographer.wsgi.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -141,7 +141,7 @@ TEMPLATE_DIRS = (
 
 TEMPLATE_CONTEXT_PROCESSORS = DEFAULT_SETTINGS.TEMPLATE_CONTEXT_PROCESSORS + (
     'django.core.context_processors.request',
-    'rboltphoto.context_processors.defaults',
+    'photographer.context_processors.defaults',
     'feincms.context_processors.add_page_if_missing',
 )
 
@@ -167,7 +167,7 @@ INSTALLED_APPS = (
     'form_designer',
     'elephantblog',
     
-    'rboltphoto'  # To register the feincms content modules, etc.
+    'photographer'  # To register the feincms content modules, etc.
 )
 
 MARKUPMIRROR_DEFAULT_MARKUP_TYPE = 'markdown'
