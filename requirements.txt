@@ -2,7 +2,7 @@ distribute>=0.6.28
 Django==1.4.2
 FeinCMS==1.6.3
 Markdown==2.2.1
-MySQL-python>=1.2.3
+MySQL-python==1.2.3
 PIL
 boto==2.6.0
 -e git+https://github.com/toastdriven/django-haystack.git@58f4eddbf1044a2a5663de470301c0af7a957b13#egg=django_haystack-dev
