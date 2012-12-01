@@ -6,7 +6,16 @@ A Django app that has integrates a configured
 content management system, a blog
 ([ElephantBlog](https://github.com/feincms/feincms-elephantblog)), and
 provides a clean way to get a portfolio website and blog up and running
-very quickly with [Heroku](http://www.heroku.com/).
+very quickly with [Heroku](http://www.heroku.com/) and
+[Amazon S3](http://aws.amazon.com/s3/).
+
+The app is designed to be used standalone with minimal programming knowledge
+in that you can download it, push it to Heroku, and have a functional site
+in minutes complete with placeholder pages ready for your content (mainly
+images for portfolio pages).
+
+The app can also be used as part of a custom app if you want to add more
+features and apps.
 
 
 Dependencies
