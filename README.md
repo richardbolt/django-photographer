@@ -18,8 +18,8 @@ otherwise you can see `requirements.txt` for a full list of dependencies.
 Installation
 ------------
 
-* Deploy with Heroku - see the [Heroku documentation](https://devcenter.heroku.com/articles/quickstart) for more detail.
-* More detail to come.
+* Read [`INSTALL.md`](https://github.com/richardbolt/django-photographer/tree/master/INSTALL.md) for specific installation instructions.
+* [Heroku documentation](https://devcenter.heroku.com/articles/quickstart) for general detail on Heroku.
 
 Themes
 ------
