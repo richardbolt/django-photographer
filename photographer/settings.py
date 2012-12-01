@@ -4,6 +4,7 @@ import sys
 import urlparse
 
 import django.conf.global_settings as DEFAULT_SETTINGS
+import dj_database_url
 
 
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', ''))
@@ -25,25 +26,12 @@ DATABASES = {
         'PORT': '',
     }
 }
-urlparse.uses_netloc.append('postgres')
-urlparse.uses_netloc.append('mysql')
+
 try:
-    if os.environ.has_key('DATABASE_URL'):
-        url = urlparse.urlparse(os.environ['DATABASE_URL'])
-        DATABASES['default'] = {
-            'NAME':     url.path[1:],
-            'USER':     url.username,
-            'PASSWORD': url.password,
-            'HOST':     url.hostname,
-            'PORT':     url.port,
-        }
-        if url.scheme == 'postgres':
-            DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
-        if url.scheme == 'mysql':
-            DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
+    # Load settings from the environment variable DATABASE_URL.
+    DATABASES['default'] = dj_database_url.config()
 except:
     print 'Unexpected error:', sys.exc_info()
-
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
