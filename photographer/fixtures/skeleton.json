@@ -148,7 +148,7 @@
             "parent": 4, 
             "level": 2, 
             "_page_title": "", 
-            "title": "Elizabeth & James", 
+            "title": "Wedding 3", 
             "override_url": "", 
             "lft": 7, 
             "publication_end_date": null, 
@@ -423,6 +423,5 @@
             "parent": 1, 
             "language_code": "en"
         }
-    }, 
-
+    }
 ]
