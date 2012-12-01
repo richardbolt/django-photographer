@@ -4,11 +4,15 @@ Installation
 This app is designed for easy deployment with Heroku so you can be up and
 running with a functional app very quickly.
 
-Deploy on Heroku
-----------------
+Deploy
+------
+
+First S3 setup:
 
 1. Sign up for Amazon S3 - File storage for pennies a month
-2. Create an Amazon S3 Bucket for file storage and add the following as a bucket policy. This will allow public reads from your bucket.
+2. Create an Amazon S3 Bucket for file storage and add the following as a
+   bucket policy. This will allow public reads from your bucket. NB: You will
+   need to change `mybucketname` to the name of your bucket.
 
 ```
 {
@@ -26,6 +30,8 @@ Deploy on Heroku
 	]
 }
 ```
+
+Second, Heroku setup and deployment:
 
 3. Sign up for Heroku
 4. Download and install the Heroku toolchain
