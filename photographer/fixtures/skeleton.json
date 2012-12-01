@@ -1,0 +1,428 @@
+[
+    {
+        "pk": 1, 
+        "model": "sites.site", 
+        "fields": {
+            "domain": "example.com", 
+            "name": "example.com"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "page.page", 
+        "fields": {
+            "meta_description": "", 
+            "rght": 2, 
+            "redirect_to": "", 
+            "navigation_extension": null, 
+            "parent": null, 
+            "level": 0, 
+            "_page_title": "Homepage", 
+            "title": "Home", 
+            "override_url": "/", 
+            "lft": 1, 
+            "publication_end_date": null, 
+            "meta_keywords": "", 
+            "_content_title": "", 
+            "tree_id": 1, 
+            "active": true, 
+            "publication_date": "2012-11-19T22:00:00Z", 
+            "in_navigation": true, 
+            "_cached_url": "/", 
+            "slug": "home", 
+            "template_key": "home.html"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "page.page", 
+        "fields": {
+            "meta_description": "", 
+            "rght": 14, 
+            "redirect_to": "/", 
+            "navigation_extension": null, 
+            "parent": null, 
+            "level": 0, 
+            "_page_title": "", 
+            "title": "Portfolio", 
+            "override_url": "", 
+            "lft": 1, 
+            "publication_end_date": null, 
+            "meta_keywords": "", 
+            "_content_title": "", 
+            "tree_id": 3, 
+            "active": true, 
+            "publication_date": "2012-11-19T23:40:00Z", 
+            "in_navigation": true, 
+            "_cached_url": "/portfolio/", 
+            "slug": "portfolio", 
+            "template_key": "portfolio.html"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "page.page", 
+        "fields": {
+            "meta_description": "", 
+            "rght": 11, 
+            "redirect_to": "/", 
+            "navigation_extension": null, 
+            "parent": 3, 
+            "level": 1, 
+            "_page_title": "", 
+            "title": "Weddings", 
+            "override_url": "", 
+            "lft": 2, 
+            "publication_end_date": null, 
+            "meta_keywords": "", 
+            "_content_title": "", 
+            "tree_id": 3, 
+            "active": true, 
+            "publication_date": "2012-11-19T23:40:00Z", 
+            "in_navigation": true, 
+            "_cached_url": "/portfolio/weddings/", 
+            "slug": "weddings", 
+            "template_key": "portfolio.html"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "page.page", 
+        "fields": {
+            "meta_description": "", 
+            "rght": 4, 
+            "redirect_to": "", 
+            "navigation_extension": null, 
+            "parent": 4, 
+            "level": 2, 
+            "_page_title": "", 
+            "title": "Wedding 1", 
+            "override_url": "", 
+            "lft": 3, 
+            "publication_end_date": null, 
+            "meta_keywords": "", 
+            "_content_title": "", 
+            "tree_id": 3, 
+            "active": true, 
+            "publication_date": "2012-11-19T23:40:00Z", 
+            "in_navigation": true, 
+            "_cached_url": "/portfolio/weddings/wedding-1/", 
+            "slug": "wedding-1", 
+            "template_key": "portfolio.html"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "page.page", 
+        "fields": {
+            "meta_description": "", 
+            "rght": 6, 
+            "redirect_to": "", 
+            "navigation_extension": null, 
+            "parent": 4, 
+            "level": 2, 
+            "_page_title": "", 
+            "title": "Wedding 2", 
+            "override_url": "", 
+            "lft": 5, 
+            "publication_end_date": null, 
+            "meta_keywords": "", 
+            "_content_title": "", 
+            "tree_id": 3, 
+            "active": true, 
+            "publication_date": "2012-11-19T23:40:00Z", 
+            "in_navigation": true, 
+            "_cached_url": "/portfolio/weddings/wedding-2/", 
+            "slug": "wedding-2", 
+            "template_key": "portfolio.html"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "page.page", 
+        "fields": {
+            "meta_description": "", 
+            "rght": 8, 
+            "redirect_to": "", 
+            "navigation_extension": null, 
+            "parent": 4, 
+            "level": 2, 
+            "_page_title": "", 
+            "title": "Elizabeth & James", 
+            "override_url": "", 
+            "lft": 7, 
+            "publication_end_date": null, 
+            "meta_keywords": "", 
+            "_content_title": "", 
+            "tree_id": 3, 
+            "active": true, 
+            "publication_date": "2012-11-19T23:40:00Z", 
+            "in_navigation": true, 
+            "_cached_url": "/portfolio/weddings/wedding-3/", 
+            "slug": "wedding-3", 
+            "template_key": "portfolio.html"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "page.page", 
+        "fields": {
+            "meta_description": "", 
+            "rght": 10, 
+            "redirect_to": "", 
+            "navigation_extension": null, 
+            "parent": 4, 
+            "level": 2, 
+            "_page_title": "", 
+            "title": "Wedding 4", 
+            "override_url": "", 
+            "lft": 9, 
+            "publication_end_date": null, 
+            "meta_keywords": "", 
+            "_content_title": "", 
+            "tree_id": 3, 
+            "active": true, 
+            "publication_date": "2012-11-19T23:40:00Z", 
+            "in_navigation": true, 
+            "_cached_url": "/portfolio/weddings/Wedding-4/", 
+            "slug": "Wedding-4", 
+            "template_key": "portfolio.html"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "page.page", 
+        "fields": {
+            "meta_description": "", 
+            "rght": 13, 
+            "redirect_to": "", 
+            "navigation_extension": null, 
+            "parent": 3, 
+            "level": 1, 
+            "_page_title": "", 
+            "title": "Portraits", 
+            "override_url": "", 
+            "lft": 12, 
+            "publication_end_date": null, 
+            "meta_keywords": "", 
+            "_content_title": "", 
+            "tree_id": 3, 
+            "active": true, 
+            "publication_date": "2012-11-19T23:40:00Z", 
+            "in_navigation": true, 
+            "_cached_url": "/portfolio/portraits/", 
+            "slug": "portraits", 
+            "template_key": "portfolio.html"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "page.page", 
+        "fields": {
+            "meta_description": "", 
+            "rght": 2, 
+            "redirect_to": "", 
+            "navigation_extension": null, 
+            "parent": null, 
+            "level": 0, 
+            "_page_title": "", 
+            "title": "About", 
+            "override_url": "", 
+            "lft": 1, 
+            "publication_end_date": null, 
+            "meta_keywords": "", 
+            "_content_title": "", 
+            "tree_id": 4, 
+            "active": true, 
+            "publication_date": "2012-11-17T07:45:00Z", 
+            "in_navigation": true, 
+            "_cached_url": "/about/", 
+            "slug": "about", 
+            "template_key": "base.html"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "page.page", 
+        "fields": {
+            "meta_description": "", 
+            "rght": 2, 
+            "redirect_to": "", 
+            "navigation_extension": null, 
+            "parent": null, 
+            "level": 0, 
+            "_page_title": "", 
+            "title": "Contact", 
+            "override_url": "", 
+            "lft": 1, 
+            "publication_end_date": null, 
+            "meta_keywords": "", 
+            "_content_title": "", 
+            "tree_id": 5, 
+            "active": true, 
+            "publication_date": "2012-11-18T14:35:00Z", 
+            "in_navigation": true, 
+            "_cached_url": "/contact/", 
+            "slug": "contact", 
+            "template_key": "contact.html"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "page.page", 
+        "fields": {
+            "meta_description": "", 
+            "rght": 2, 
+            "redirect_to": "", 
+            "navigation_extension": null, 
+            "parent": null, 
+            "level": 0, 
+            "_page_title": "", 
+            "title": "Blog", 
+            "override_url": "", 
+            "lft": 1, 
+            "publication_end_date": null, 
+            "meta_keywords": "", 
+            "_content_title": "", 
+            "tree_id": 6, 
+            "active": true, 
+            "publication_date": "2012-11-20T05:50:00Z", 
+            "in_navigation": true, 
+            "_cached_url": "/blog/", 
+            "slug": "blog", 
+            "template_key": "blog.html"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "page.page", 
+        "fields": {
+            "meta_description": "", 
+            "rght": 2, 
+            "redirect_to": "", 
+            "navigation_extension": null, 
+            "parent": null, 
+            "level": 0, 
+            "_page_title": "Search", 
+            "title": "Search", 
+            "override_url": "", 
+            "lft": 1, 
+            "publication_end_date": null, 
+            "meta_keywords": "", 
+            "_content_title": "", 
+            "tree_id": 7, 
+            "active": true, 
+            "publication_date": "2012-11-25T06:20:00Z", 
+            "in_navigation": false, 
+            "_cached_url": "/search/", 
+            "slug": "search", 
+            "template_key": "search/search.html"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "page.formcontent", 
+        "fields": {
+            "show_form_title": true, 
+            "form": 1, 
+            "parent": 2, 
+            "ordering": 0, 
+            "region": "main", 
+            "success_message": "Thank you for contacting me. You'll be hearing from me shortly."
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "page.applicationcontent", 
+        "fields": {
+            "ordering": 0, 
+            "region": "main", 
+            "parent": 12, 
+            "parameters": "", 
+            "urlconf_path": "haystack"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "page.applicationcontent", 
+        "fields": {
+            "ordering": 1, 
+            "region": "main", 
+            "parent": 11, 
+            "parameters": "", 
+            "urlconf_path": "elephantblog.urls"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "form_designer.form", 
+        "fields": {
+            "config_json": "{\"save_fs\": {}, \"email\": {\"email\": \"me@mydomain.com\"}}", 
+            "title": "Contact Me"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "form_designer.formfield", 
+        "fields": {
+            "default_value": "", 
+            "name": "name", 
+            "form": 1, 
+            "title": "Name", 
+            "ordering": 0, 
+            "choices": "", 
+            "help_text": "", 
+            "is_required": true, 
+            "type": "text"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "form_designer.formfield", 
+        "fields": {
+            "default_value": "", 
+            "name": "email", 
+            "form": 1, 
+            "title": "Email", 
+            "ordering": 0, 
+            "choices": "", 
+            "help_text": "", 
+            "is_required": true, 
+            "type": "email"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "form_designer.formfield", 
+        "fields": {
+            "default_value": "", 
+            "name": "message", 
+            "form": 1, 
+            "title": "Message", 
+            "ordering": 0, 
+            "choices": "", 
+            "help_text": "", 
+            "is_required": true, 
+            "type": "longtext"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "elephantblog.category", 
+        "fields": {
+            "ordering": 0
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "elephantblog.categorytranslation", 
+        "fields": {
+            "description": "", 
+            "title": "Adventure", 
+            "slug": "adventure", 
+            "parent": 1, 
+            "language_code": "en"
+        }
+    }, 
+
+]
