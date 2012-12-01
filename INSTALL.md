@@ -7,13 +7,36 @@ running with a functional app very quickly.
 Deploy on Heroku
 ----------------
 
-1. Sign up for Heroku
-2. Download and install the Heroku toolchain
-3. Open Terminal and cd to the folder you put this app
-4. Run the following commands, changing data as appropriate
+1. Sign up for Amazon S3 - File storage for pennies a month
+2. Create an Amazon S3 Bucket for file storage and add the following as a bucket policy. This will allow public reads from your bucket.
+
+```
+{
+	"Version": "2008-10-17",
+	"Statement": [
+		{
+			"Sid": "AllowPublicRead",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": "*"
+			},
+			"Action": "s3:GetObject",
+			"Resource": "arn:aws:s3:::mybucketname/*"
+		}
+	]
+}
+```
+
+3. Sign up for Heroku
+4. Download and install the Heroku toolchain
+5. Open Terminal and cd to the folder you put this app
+6. Run the following commands, changing data as appropriate
 
 ```
 heroku create
+heroku config:add S3_KEY=mykey
+heroku config:add S3_SECRET=mysecret
+heroku config:add S3_BUCKET=mybucketname
 heroku config:add DJANGO_SECRET_KEY='completely-random-secret-key-here'
 heroku config:add RB_SITE_TITLE='My Site Title'
 heroku config:add BLOG_TITLE=RB_SITE_TITLE
