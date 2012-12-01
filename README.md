@@ -36,6 +36,10 @@ a unique look for your site.
 * `screen.css` is the primary theme file styling all the elements.
 * `forms.sass` handles the form styles.
 
+The default theme use the following jQuery libraries:
+
+* jQuery Horizontal Scroller: http://manos.malihu.gr/jquery-custom-content-scroller/
+* jQuery Cycle Lite Plugin: http://malsup.com/jquery/cycle/lite/
 
 License
 -------

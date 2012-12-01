@@ -56,11 +56,3 @@ DNS
 You will need to edit your DNS settings so that you can use your url with
 your new website. Details here: https://devcenter.heroku.com/articles/custom-domains
 
-
-Notes
------
-
-The default theme use the following js libraries:
-
-* jQuery
-* jQuery Horizontal Scroller: http://manos.malihu.gr/jquery-custom-content-scroller/
