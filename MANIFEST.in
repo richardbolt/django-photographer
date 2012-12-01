@@ -1,0 +1,8 @@
+include LICENSE
+include MANIFEST.in
+Procfile
+include README.md
+include requirements.txt
+recursive-include photographer/static *
+recursive-include photographer/templates *
+recursive-include themes *.rb *.sass
