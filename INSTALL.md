@@ -75,6 +75,34 @@ You should now be up and running. To visit your site type `heroku open`.
 Then login to the admin site with the credentials you created during the
 syncdb command and start adding some content.
 
+** One More Thing: Search **
+
+The provided search engine uses the Bonsai ElasticSearch add-on to Heroku.
+First add Bonsai to your app:
+
+```heroku addons:add bonsai:test```
+
+Find the connection detail:
+
+```heroku config:get BONSAI_URL```
+
+Paste the given url into the following command in place of
+`OutputFromBONSAI_URL`:
+
+```heroku config:add ELASTICSEARCH_URL=OutputFromBONSAI_URL```
+
+Create and populate the initial search index switching `OutputFromBONSAI_URL`
+for your real BONSAI_URL:
+
+```
+curl -XPOST OutputFromBONSAI_URL/haystack
+heroku run ./manage.py rebuild_index
+```
+
+You are setup for searching. Only your blog is configured for search at this
+time. Your search index will be automatically updated with each new, or
+modified, blog entry.
+
 Optional configuration parameters
 ---------------------------------
 
@@ -96,6 +124,9 @@ Turn off debug mode when all is well
 ```
 heroku config:remove DJANGO_DEBUG
 ```
+
+You can still view debugging messages when debug mode is off with the
+following command: `heroku logs`.
 
 DNS
 ---

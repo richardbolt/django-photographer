@@ -182,12 +182,12 @@ ABSOLUTE_URL_OVERRIDES = {
 
 BLOG_PAGINATE_BY = 10
 
-# Search with Haystack.
-# NB: You will want to use a different backend like ElasticSearch if you are
-#     running something other than a small site.
+# Search with Haystack and ElasticSearch.
 HAYSTACK_CONNECTIONS = {
     'default': {
-        'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
+        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+        'URL': os.environ.get('ELASTICSEARCH_URL', ''),
+        'INDEX_NAME': 'haystack',
     },
 }
 
