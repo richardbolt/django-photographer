@@ -21,7 +21,7 @@ class EntryIndex(indexes.RealTimeSearchIndex, indexes.Indexable):
         return Entry
     
     def should_update(self, instance, **kwargs):
-        return instance.is_active()
+        return True # instance.is_active()
 
     def index_queryset(self):
         """
