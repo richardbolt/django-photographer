@@ -45,10 +45,26 @@ heroku config:add S3_SECRET=mysecret
 heroku config:add S3_BUCKET=mybucketname
 heroku config:add DJANGO_SECRET_KEY='completely-random-secret-key-here'
 heroku config:add RB_SITE_TITLE='My Site Title'
-heroku config:add BLOG_TITLE=RB_SITE_TITLE
+heroku config:add BLOG_TITLE='My Blog'
 heroku config:add BLOG_DESCRIPTION='My blog description'
-heroku config:add ADMIN_NAME=RB_SITE_TITLE
+heroku config:add ADMIN_NAME='FirstName LastName'
 heroku config:add ADMIN_EMAIL=me@mydomain.com
+```
+
+You are now almost there. You will want to setup a database to store your site
+data. The easiest way is with The Heroku PostgreSQL addon. You can add this
+database from the Heroku website for your app, or from the terminal as follows
+
+```
+heroku addons:add heroku-postgresql:dev
+heroku addons:add pgbackups:auto-week
+```
+
+This gets you a database ready for your app and provisions some backups.
+
+Once your database is ready you are ready to deploy your app:
+
+```
 git push heroku master
 heroku run ./manage.py syncdb
 heroku run ./manage.py loaddata photographer/fixtures/skeleton.json
@@ -56,6 +72,8 @@ heroku run ./manage.py loaddata photographer/fixtures/skeleton.json
 
 You should now be up and running. To visit your site type `heroku open`.
 
+Then login to the admin site with the credentials you created during the
+syncdb command and start adding some content.
 
 Optional configuration parameters
 ---------------------------------
