@@ -14,6 +14,7 @@ django-storages==1.1.5
 feincms-elephantblog==0.3.0
 form-designer>=0.1.0.pre
 gunicorn==0.16.1
+newrelic
 psycopg2==2.4.5
 pyelasticsearch==0.2
 requests==0.14.2
