@@ -191,6 +191,22 @@ HAYSTACK_CONNECTIONS = {
     },
 }
 
+# Check for SendGrid for email delivery first:
+if os.environ.get('SENDGRID_USERNAME') and os.environ.get('SENDGRID_PASSWORD'):
+    EMAIL_HOST = 'smtp.sendgrid.net'
+    EMAIL_HOST_USER = os.environ['SENDGRID_USERNAME']
+    EMAIL_HOST_PASSWORD = os.environ['SENDGRID_PASSWORD']
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+else:
+    # Standard mail configuration: configure your env vars as required:
+    EMAIL_HOST = os.environ.get('EMAIL_HOST_USER', DEFAULT_SETTINGS.EMAIL_HOST)
+    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+    EMAIL_PORT = int(os.environ.get('EMAIL_PORT', DEFAULT_SETTINGS.EMAIL_PORT))
+    EMAIL_USE_TLS = bool(os.environ.get('EMAIL_USE_TLS',
+                                        DEFAULT_SETTINGS.EMAIL_USE_TLS))
+
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.
