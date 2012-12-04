@@ -49,6 +49,7 @@ heroku config:add BLOG_TITLE='My Blog'
 heroku config:add BLOG_DESCRIPTION='My blog description'
 heroku config:add ADMIN_NAME='FirstName LastName'
 heroku config:add ADMIN_EMAIL=me@mydomain.com
+heroku addons:add sendgrid:starter
 ```
 
 You are now almost there. You will want to setup a database to store your site
