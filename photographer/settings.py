@@ -16,17 +16,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
-    }
-}
-
+DATABASES = DEFAULT_SETTINGS.DATABASES
 try:
     # Load settings from the environment variable DATABASE_URL.
     DATABASES['default'] = dj_database_url.config()

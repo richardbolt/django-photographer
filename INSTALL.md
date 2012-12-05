@@ -78,7 +78,7 @@ syncdb command and start adding some content. You will want to browse to the
 Forms under Form_Designer and edit the email for the form configuration from
 me@mydomain.com to your email address.
 
-** One More Thing: Search **
+**One More Thing: Search**
 
 The provided search engine uses the Bonsai ElasticSearch add-on to Heroku.
 First add Bonsai to your app:
