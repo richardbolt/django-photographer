@@ -1,4 +1,4 @@
-<!DOCTYPE html>{% load feincms_page_tags mptt_tags %}
+<!DOCTYPE html>{% load feincms_page_tags mptt_tags rb_theme_tags %}
 <html lang="en-us">
 <head>
     <title>{% block head_title %}{{ RB_SITE_TITLE }} - {% block title %}{% endblock title %}{% endblock head_title %}</title>
@@ -14,21 +14,19 @@
     {% block extrahead %}{% endblock extrahead %}
     
     {% block csslibraries %}
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}themes/{{ RB_THEME }}/fonts/oxygen-mono-fontfacekit/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}themes/{{ RB_THEME }}/styles/screen.css">
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}themes/{{ RB_THEME }}/styles/forms.css">
     <!--[if IE]><link rel="stylesheet" href="{{ STATIC_URL }}themes/{{ RB_THEME }}/styles/ie.css"><![endif]-->
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}themes/{{ RB_THEME }}/styles/jquery.mCustomScrollbar.css">
+    
     {% endblock csslibraries %}
     {% block jslibraries %}
     <script type="text/javascript" src="{{ STATIC_URL }}js/modernizr.custom.05060.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-ui-1.9.1.min.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}themes/{{ RB_THEME }}/js/jquery.nav.custom.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}themes/{{ RB_THEME }}/js/jquery.cycle.lite.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}themes/{{ RB_THEME }}/js/jquery.mousewheel.min.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}themes/{{ RB_THEME }}/js/jquery.mCustomScrollbar.min.js"></script>
     {% endblock jslibraries %}
+    
+    {% rb_theme_includes %}
+    
     {% block js %}
     {% endblock js %}
 </head>
