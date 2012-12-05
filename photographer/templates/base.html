@@ -3,12 +3,14 @@
 <head>
     <title>{% block head_title %}{{ RB_SITE_TITLE }} - {% block title %}{% endblock title %}{% endblock head_title %}</title>
     <!-----------------------------------------------
-    RICHARD BOLT, ADVENTURER, PHOTOGRAPHER, ENGINEER.
+    POWERED BY django-photographer.
+    BY RICHARD BOLT, ADVENTURER, PHOTOGRAPHER, ENGINEER.
     ------------------------------------------------>
     <meta charset="utf-8">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="imagetoolbar" content="no">
-    <meta name="description" content="{% block meta_description %}{% endblock meta_description %}" />
+    {% if feincms_page.meta_description %}<meta name="description" content="{{ feincms_page.meta_description }}">{% endif %}
+    {% if feincms_page.meta_keywords %}<meta name="keywords" content="{{ feincms_page.meta_keywords }}">{% endif %}
     
     <link rel="alternate" type="application/rss+xml" title="{{ RB_SITE_TITLE }}" href="{{ RB_BLOG_RSS_URL }}">
     {% block extrahead %}{% endblock extrahead %}
