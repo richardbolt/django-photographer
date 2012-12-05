@@ -74,7 +74,9 @@ heroku run ./manage.py loaddata photographer/fixtures/skeleton.json
 You should now be up and running. To visit your site type `heroku open`.
 
 Then login to the admin site with the credentials you created during the
-syncdb command and start adding some content.
+syncdb command and start adding some content. You will want to browse to the
+Forms under Form_Designer and edit the email for the form configuration from
+me@mydomain.com to your email address.
 
 ** One More Thing: Search **
 

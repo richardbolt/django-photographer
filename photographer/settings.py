@@ -206,6 +206,8 @@ else:
     EMAIL_PORT = int(os.environ.get('EMAIL_PORT', DEFAULT_SETTINGS.EMAIL_PORT))
     EMAIL_USE_TLS = bool(os.environ.get('EMAIL_USE_TLS',
                                         DEFAULT_SETTINGS.EMAIL_USE_TLS))
+DEFAULT_FROM_EMAIL = os.environ.get('ADMIN_EMAIL',
+                                    DEFAULT_SETTINGS.DEFAULT_FROM_EMAIL)
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
