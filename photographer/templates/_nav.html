@@ -1,0 +1,19 @@
+{% load feincms_page_tags mptt_tags %}<nav>
+    {% spaceless %}
+    {% feincms_nav feincms_page level=1 depth=3 as nav %}
+    {% for node,structure in nav|tree_info %}
+       {% if structure.new_level %}<ul><li>{% else %}</li><li>{% endif %} 
+       <a href="{{ node.get_absolute_url }}"{% if node|is_equal_or_parent_of:feincms_page %} class="active"{% endif %}>{{ node.title }}</a> 
+       {% for level in structure.closed_levels %}</li></ul>{% endfor %} 
+    {% endfor %}
+    <form method="get" action="{{ RB_SITE_URL }}search/" name="search" id="search-form">
+        <label for="search-q">Search </label>
+        {% if form.q %}
+            {{ form.q }}
+        {% else %}
+            <input type="text" name="q" id="search-q">
+        {% endif %}
+        <input type="submit" class="search-button" value="Go">
+    </form>
+    {% endspaceless %}
+</nav>

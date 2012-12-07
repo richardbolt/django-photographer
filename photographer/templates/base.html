@@ -27,43 +27,19 @@
     <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-ui-1.9.1.min.js"></script>
     {% endblock jslibraries %}
     
-    {% rb_theme_includes %}
+    {% rb_theme_include '_head.html' %}
     
     {% block js %}
     {% endblock js %}
 </head>
 <body>
-    <nav>{% block nav %}
-        {% spaceless %}
-        {% feincms_nav feincms_page level=1 depth=3 as nav %}
-        {% for node,structure in nav|tree_info %}
-           {% if structure.new_level %}<ul><li>{% else %}</li><li>{% endif %} 
-           <a href="{{ node.get_absolute_url }}"{% if node|is_equal_or_parent_of:feincms_page %} class="active"{% endif %}>{{ node.title }}</a> 
-           {% for level in structure.closed_levels %}</li></ul>{% endfor %} 
-        {% endfor %}
-        <form method="get" action="{{ RB_SITE_URL }}search/" name="search" id="search-form">
-            <label for="search-q">Search </label>
-            {% if form.q %}
-                {{ form.q }}
-            {% else %}
-                <input type="text" name="q" id="search-q">
-            {% endif %}
-            <input type="submit" class="search-button" value="Go">
-        </form>
-        {% endspaceless %}
-    {% endblock nav %}</nav>
+    {% block nav %}{% rb_theme_include '_nav.html' %}{% endblock nav %}
     <div id="content">
     {% spaceless %}
     {% block content %}
     {% endblock content %}
     {% endspaceless %}
     </div>
-    <footer>{% block footer %}
-        <ul>
-            <li><a href="{{ RB_SITE_URL }}">&copy; {{ RB_SITE_TITLE }}</a></li>
-            {% if RB_FACEBOOK %}<li><a href="http://www.facebook.com/{{ RB_FACEBOOK }}">Facebook</a></li>{% endif %}
-            {% if RB_TWITTER_HANDLE %}<li><a href="http://twitter.com/{{ RB_TWITTER_HANDLE }}">Twitter</a></li>{% endif %}
-        </ul>
-    {% endblock footer %}</footer>
+    {% block footer %}{% rb_theme_include '_footer.html' %}{% endblock footer %}
 </body>
 </html>
