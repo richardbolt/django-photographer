@@ -29,7 +29,7 @@ class EntryIndex(indexes.RealTimeSearchIndex, indexes.Indexable):
         Currently we index all active pages.
         
         """
-        return Entry.objects.active()
+        return self.get_model().objects.active()
 
     def get_updated_field(self):
         return "mod_date"
