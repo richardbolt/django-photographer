@@ -24,19 +24,19 @@
     <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-ui-1.9.1.min.js"></script>
     {% endblock jslibraries %}
     
-    {% block extrahead %}{% rb_theme_include '_head.html' %}{% endblock extrahead %}
+    {% block extrahead %}{% rb_theme_include RB_TEMPLATE_HEAD %}{% endblock extrahead %}
     
     {% block js %}
     {% endblock js %}
 </head>
 <body>
-    {% block header %}{% rb_theme_include '_header.html' %}{% endblock header %}
-    {% block nav %}{% rb_theme_include '_nav.html' %}{% endblock nav %}
+    {% block header %}{% rb_theme_include RB_TEMPLATE_HEADER %}{% endblock header %}
+    {% block nav %}{% rb_theme_include RB_TEMPLATE_NAV %}{% endblock nav %}
     <div id="content">
     {% spaceless %}
     {% block content %}{% endblock content %}
     {% endspaceless %}
     </div>
-    {% block footer %}{% rb_theme_include '_footer.html' %}{% endblock footer %}
+    {% block footer %}{% rb_theme_include RB_TEMPLATE_FOOTER %}{% endblock footer %}
 </body>
 </html>

@@ -24,6 +24,12 @@ BLOG_TITLE = os.environ.get('BLOG_TITLE', RB_SITE_TITLE)
 BLOG_DESCRIPTION = os.environ.get('BLOG_DESCRIPTION', 'The blog of '+RB_SITE_TITLE)
 RB_FACEBOOK = os.environ.get('RB_FACEBOOK', '')
 RB_TWITTER_HANDLE = os.environ.get('RB_TWITTER_HANDLE', '')
+# Template names:
+RB_TEMPLATE_BASE = os.environ.get('RB_TEMPLATE_BASE', 'base.html')
+RB_TEMPLATE_HEAD = os.environ.get('RB_TEMPLATE_HEAD', '_head.html')
+RB_TEMPLATE_HEADER = os.environ.get('RB_TEMPLATE_HEADER', '_header.html')
+RB_TEMPLATE_NAV = os.environ.get('RB_TEMPLATE_NAV', '_nav.html')
+RB_TEMPLATE_FOOTER = os.environ.get('RB_TEMPLATE_FOOTER', '_footer.html')
 
 DATABASES = DEFAULT_SETTINGS.DATABASES
 try:
