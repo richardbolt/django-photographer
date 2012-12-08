@@ -1,5 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.conf import settings
+from django.conf.urls.defaults import handler500
 from django.contrib import admin
 from django.views.generic.simple import direct_to_template
 
@@ -9,6 +10,8 @@ import markupmirror.urls
 
 admin.autodiscover()
 sitemaps = {'pages': PageSitemap}
+
+handler500 = 'photographer.views.server_error'
 
 urlpatterns = patterns('',    
     url(r'^admin/', include(admin.site.urls)),
