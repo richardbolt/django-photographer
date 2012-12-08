@@ -16,6 +16,15 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+RB_SITE_TITLE = os.environ.get('RB_SITE_TITLE', '')
+RB_THEME = os.environ.get('RB_THEME', 'plain')
+RB_SITE_URL = os.environ.get('RB_SITE_URL', '/')
+RB_BLOG_RSS_URL = os.environ.get('RB_BLOG_RSS_URL', '/blog/feed/')
+BLOG_TITLE = os.environ.get('BLOG_TITLE', RB_SITE_TITLE)
+BLOG_DESCRIPTION = os.environ.get('BLOG_DESCRIPTION', 'The blog of '+RB_SITE_TITLE)
+RB_FACEBOOK = os.environ.get('RB_FACEBOOK', '')
+RB_TWITTER_HANDLE = os.environ.get('RB_TWITTER_HANDLE', '')
+
 DATABASES = DEFAULT_SETTINGS.DATABASES
 try:
     # Load settings from the environment variable DATABASE_URL.
@@ -111,9 +120,11 @@ ROOT_URLCONF = 'photographer.urls'
 WSGI_APPLICATION = 'photographer.wsgi.application'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Put strings here, like "/home/html/django_templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.abspath(os.path.join(os.path.dirname(__file__), 'static',
+                                 'themes', RB_THEME, 'templates')),
     os.path.abspath(os.path.join(os.path.dirname(__file__), 'templates'))
 )
 
@@ -227,12 +238,3 @@ LOGGING = {
         },
     }
 }
-
-RB_SITE_TITLE = os.environ.get('RB_SITE_TITLE', '')
-RB_THEME = os.environ.get('RB_THEME', 'plain')
-RB_SITE_URL = os.environ.get('RB_SITE_URL', '/')
-RB_BLOG_RSS_URL = os.environ.get('RB_BLOG_RSS_URL', '/blog/feed/')
-BLOG_TITLE = os.environ.get('BLOG_TITLE', RB_SITE_TITLE)
-BLOG_DESCRIPTION = os.environ.get('BLOG_DESCRIPTION', 'The blog of '+RB_SITE_TITLE)
-RB_FACEBOOK = os.environ.get('RB_FACEBOOK', '')
-RB_TWITTER_HANDLE = os.environ.get('RB_TWITTER_HANDLE', '')

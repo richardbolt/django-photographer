@@ -12,32 +12,29 @@
     {% if feincms_page.meta_description %}<meta name="description" content="{{ feincms_page.meta_description }}">{% endif %}
     {% if feincms_page.meta_keywords %}<meta name="keywords" content="{{ feincms_page.meta_keywords }}">{% endif %}
     
-    <link rel="alternate" type="application/rss+xml" title="{{ RB_SITE_TITLE }}" href="{{ RB_BLOG_RSS_URL }}">
-    {% block extrahead %}{% endblock extrahead %}
-    
     {% block csslibraries %}
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}themes/{{ RB_THEME }}/styles/screen.css">
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}themes/{{ RB_THEME }}/styles/forms.css">
     <!--[if IE]><link rel="stylesheet" href="{{ STATIC_URL }}themes/{{ RB_THEME }}/styles/ie.css"><![endif]-->
-    
     {% endblock csslibraries %}
+    
     {% block jslibraries %}
     <script type="text/javascript" src="{{ STATIC_URL }}js/modernizr.custom.05060.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-ui-1.9.1.min.js"></script>
     {% endblock jslibraries %}
     
-    {% rb_theme_include '_head.html' %}
+    {% block extrahead %}{% rb_theme_include '_head.html' %}{% endblock extrahead %}
     
     {% block js %}
     {% endblock js %}
 </head>
 <body>
+    {% block header %}{% rb_theme_include '_header.html' %}{% endblock header %}
     {% block nav %}{% rb_theme_include '_nav.html' %}{% endblock nav %}
     <div id="content">
     {% spaceless %}
-    {% block content %}
-    {% endblock content %}
+    {% block content %}{% endblock content %}
     {% endspaceless %}
     </div>
     {% block footer %}{% rb_theme_include '_footer.html' %}{% endblock footer %}
