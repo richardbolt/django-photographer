@@ -8,7 +8,7 @@ from form_designer.models import FormContent
 from markupmirror.feincms.models import MarkupMirrorContent
 
 
-Page.register_extensions('datepublisher', 'navigation', 'titles', 'seo')
+Page.register_extensions('titles', 'seo')
 
 Page.register_templates({
     'title': 'Standard template',
@@ -64,7 +64,7 @@ Page.create_content_type(ApplicationContent, APPLICATIONS=(
         ('haystack', 'Search', {'urls': 'haystack.urls'})
 ))
 
-Entry.register_extensions('feincms.module.extensions.datepublisher',
+Entry.register_extensions('feincms.module.extensions.seo',
                           'elephantblog.extensions.blogping',
 )
 Entry.register_regions(
