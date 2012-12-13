@@ -1,7 +1,9 @@
-{% extends feincms_page.template.path|default:"base.html" %}
+{% extends feincms_page.template.path|default:"blog.html" %}
 {% load feincms_tags i18n %}
 
-{% block extrahead %}<link rel="permalink" href="{{ entry.get_absolute_url }}">{% endblock extrahead %}
+{% block extrahead %}{{ block.super }}
+<link rel="permalink" href="{{ entry.get_absolute_url }}">
+{% endblock extrahead %}
 
 {% block title %}{% trans "Blog" %} - {{ object }}{% endblock %}
 
