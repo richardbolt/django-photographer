@@ -1,6 +1,6 @@
 include LICENSE
 include MANIFEST.in
-Procfile
+include Procfile
 include README.md
 include requirements.txt
 recursive-include photographer/static *
