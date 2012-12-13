@@ -6,7 +6,8 @@ MySQL-python==1.2.3
 PIL
 boto==2.6.0
 dj-database-url==0.2.1
--e git+https://github.com/toastdriven/django-haystack.git@58f4eddbf1044a2a5663de470301c0af7a957b13#egg=django_haystack-dev
+django-admin-tools==0.4.1
+-e git+https://github.com/toastdriven/django-haystack.git@9d92d4da0a1ec75978fc3949375dda9a1707469f#egg=django_haystack-dev
 django-markupmirror==0.1c1
 django-mptt==0.5.4
 django-s3-folder-storage==0.1

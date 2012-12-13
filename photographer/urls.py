@@ -13,7 +13,8 @@ sitemaps = {'pages': PageSitemap}
 
 handler500 = 'photographer.views.server_error'
 
-urlpatterns = patterns('',    
+urlpatterns = patterns('',
+    url(r'^admin_tools/', include('admin_tools.urls')),
     url(r'^admin/', include(admin.site.urls)),
     (r'^markupmirror/', include(markupmirror.urls.preview)),
     url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap',
