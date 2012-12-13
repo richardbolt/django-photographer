@@ -15,7 +15,7 @@ in minutes complete with placeholder pages ready for your content (mainly
 images for portfolio pages).
 
 The app can also be used as part of a custom app if you want to add more
-features and apps.
+features and apps to the base.
 
 
 Dependencies
@@ -33,9 +33,12 @@ Installation
 Themes
 ------
 
-The App is initially supplied with a default theme "plain".
+The App is initially supplied with a default theme "plain". The theme assets
+are places in the `photographer/static/<themename>/` folder. The .sass files
+used to develop the default theme styles are in the `themes` folder in the
+root of the project.
 
-[Compass](http://compass-style.org/) was used to develop the default theme.
+[Compass](http://compass-style.org/) was used to develop the default theme css.
 I recommend installing it, creating a new theme based on the default, and
 checking out the files in [`themes/plain/sass-src/`](https://github.com/richardbolt/django-photographer/tree/master/themes/plain/sass-src) for details on how it is
 put together and how Compass and Sass will make your life easier developing
@@ -49,6 +52,12 @@ The default theme use the following jQuery libraries:
 
 * jQuery Horizontal Scroller: http://manos.malihu.gr/jquery-custom-content-scroller/
 * jQuery Cycle Lite Plugin: http://malsup.com/jquery/cycle/lite/
+
+There is a `templates` folder within the theme folder. This `templates` folder
+is the first place searched for templates when the template machinery is
+compiling the pages. What this means in practice is you can override any
+template by placing it in that folder inside your theme. As an example there
+is a `_head.html` file in the default `plain` theme folder.
 
 License
 -------
