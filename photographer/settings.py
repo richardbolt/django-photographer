@@ -80,7 +80,7 @@ MEDIA_ROOT = '/%s/' % DEFAULT_S3_PATH
 MEDIA_URL = '//s3.amazonaws.com/%s/media/' % AWS_STORAGE_BUCKET_NAME
 STATIC_ROOT = "/%s/" % STATIC_S3_PATH
 STATIC_URL = '//s3.amazonaws.com/%s/static/' % AWS_STORAGE_BUCKET_NAME
-ADMIN_MEDIA_PREFIX = STATIC_URL  # Deprecated but required for django-admin-tools (temporarily).
+ADMIN_MEDIA_PREFIX = STATIC_URL+'admin/'  # Deprecated but required for django-admin-tools (temporarily).
 
 if DEBUG:
     # For debug when we don't want to have to use S3.
