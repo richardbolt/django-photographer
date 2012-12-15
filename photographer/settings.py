@@ -93,6 +93,7 @@ if DEBUG:
     STATIC_ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                                               'sitestatic')
 
+ADMIN_TOOLS_THEMING_CSS = 'themes/%s/styles/admin.css' % RB_THEME
 
 # List of finder classes that know how to find static files in
 # various locations.
