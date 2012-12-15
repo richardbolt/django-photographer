@@ -1,0 +1,45 @@
+/*
+    Admin theming styles
+    This is an override of django-admin-tools
+    admin_tools/media/admin_tools/css/theming.css
+
+
+@import base.sass
+
+#header
+    background-color= !background_color
+    #user-tools
+        +fontfamily
+        font-size: 1.0em
+        color= !text_color
+        a
+            color= !link_color
+        padding:
+            top: 11px
+    #branding
+        border-bottom= 3px "solid" !link_color
+        h1
+            +fontfamily
+            font-size: 1.5em
+            color= !link_color
+            margin: 0
+            padding:
+                top: 8px
+                bottom: 7px
+                left: 15px
+            height: 20px
+            width: 500px
+
+
+div
+    &.breadcrumbs
+        display: block
+        padding: 10px 15px
+        border: 0
+        background-position: 0 -8px
+        border-bottom: 1px solid #ededed
+
+div
+    &.breadcrumbs
+        a
+            display: inline
