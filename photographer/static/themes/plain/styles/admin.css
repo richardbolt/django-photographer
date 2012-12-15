@@ -4,6 +4,7 @@
 #header #user-tools a { color: #b5a58d; }
 #header #branding { border-bottom: 3px solid #b5a58d; }
 #header #branding h1 { font-family: 'OxygenMonoRegular', menlo, 'andale mono', 'courier new', sans-serif; font-size: 80%; text-shadow: rgba(255, 255, 255, 0.898438) 1px 1px 0px; font-size: 1.5em; color: #b5a58d; margin: 0; padding-top: 8px; padding-bottom: 7px; padding-left: 15px; height: 20px; width: 500px; }
+#header ul#navigation-menu li.first a { background: transparent url('../img/home_16x16.png?1332301386') no-repeat 3px 2px; }
 
 div.breadcrumbs { display: block; padding: 10px 15px; border: 0; background-position: 0 -8px; border-bottom: 1px solid #ededed; }
 
