@@ -37,6 +37,17 @@
                 a
                     background= "transparent" image_url("home_16x16.png") "no-repeat" 3px 2px
 
+#content
+    h1
+        +fontfamily
+        text-transform: uppercase
+        font-weight: normal
+        font-size: 1.5em
+        color= !link_color
+    .dashboard-column.ui-sortable
+        margin-left: -10px
+        margin-right: 10px
+
 div
     &.breadcrumbs
         display: block
@@ -44,8 +55,15 @@ div
         border: 0
         background-position: 0 -8px
         border-bottom: 1px solid #ededed
-
-div
-    &.breadcrumbs
+        +fontfamily
+        text-transform: uppercase
+        font-size: 0.9em
         a
             display: inline
+            &:link
+                color= !link_color
+            &:visited
+                color= !link_color
+            &:hover
+                color= !link_hover_color
+            
