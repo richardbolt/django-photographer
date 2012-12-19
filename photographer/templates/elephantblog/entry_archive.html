@@ -46,24 +46,24 @@
 {% endblock %}
 
 {% block pagination %}
-<div class="pagination">
+<nav class="pagination">
+    <ul>
     {% if page_obj.has_previous %}
-        <a href="?page={{ page_obj.previous_page_number }}">&laquo; Previous</a>
+        <li rel="prev"><a href="?page={{ page_obj.previous_page_number }}">&larr;</a></li>
     {% endif %}
-    
     {% if page_obj.has_next or page_obj.has_previous %}
     {% for p in page_obj.page_range|default_if_none:page_obj.paginator.page_range %}
-        {% if not p %}&hellip;
+        {% if not p %}<li>&hellip;</li>
         {% else %}
-            <a {% if p == page_obj.number and not page_obj.show_all_objects %}class="mark"{% endif %} href="?page={{ p }}">{{ p }}</a>
+            <li{% if forloop.first %} rel="first"{% elif forloop.last %} rel="last"{% endif %}><a {% if p == page_obj.number and not page_obj.show_all_objects %}class="mark"{% endif %} href="?page={{ p }}">{{ p }}</a></li>
         {% endif %}
     {% endfor %}
     {% endif %}
-
     {% if page_obj.has_next %}
-        <a href="?page={{ page_obj.next_page_number }}">Next &raquo;</a>
+        <li rel="next"><a href="?page={{ page_obj.next_page_number }}">&rarr;</a></li>
     {% endif %}
-</div>
+    </ul>
+</nav>
 {% endblock %}
 {% endblock %}
 

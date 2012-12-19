@@ -1,4 +1,4 @@
-{% load feincms_page_tags mptt_tags %}<nav>
+{% load feincms_page_tags mptt_tags %}<nav id="primary-nav">
     {% spaceless %}
     {% feincms_nav feincms_page level=1 depth=3 as nav %}
     {% for node,structure in nav|tree_info %}

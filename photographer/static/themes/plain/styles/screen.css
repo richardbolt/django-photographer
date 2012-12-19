@@ -34,23 +34,30 @@ strong { font-weight: bolder; }
 
 em { font-style: italic; }
 
-nav { width: 1200px; height: 29px; margin-top: 14px; margin-left: auto; margin-right: auto; margin-bottom: 14px; }
-nav a { text-decoration: none; }
-nav .expanded { left: auto; }
-nav form { float: right; }
-nav form label { text-transform: uppercase; font-size: 1.8em; line-height: 1.3em; }
-nav form input[type=text] { width: 150px; padding-top: 2px; padding-bottom: 2px; }
-nav form input { margin-top: 0px; margin-bottom: 0px; margin-right: 0px; }
-nav ul { z-index: 10; text-align: left; text-transform: uppercase; margin: 0; }
-nav ul li { float: left; display: block; font-size: 1.8em; line-height: 1.3em; }
-nav ul li a { margin-left: 20px; margin-right: 20px; }
-nav ul li a.active { color: #cc9a50; }
-nav ul li a:link.hover { color: #cc9a50; }
-nav ul li ul { display: none; z-index: 10; position: absolute; width: auto; margin-bottom: 0; background-color: rgba(249, 247, 244, 0.8); }
-nav ul li ul li { font-size: 0.8em; margin-left: 0; float: none; display: inline; }
-nav ul li ul li ul { margin-bottom: 0; }
-nav ul li ul li ul li { margin-left: 0; margin-bottom: !border_radius; margin-top: 5px; float: none; display: block; }
-nav ul li ul li ul li:last-of-type { padding-bottom: 5px; }
+nav#primary-nav { width: 1200px; height: 29px; margin-top: 14px; margin-left: auto; margin-right: auto; margin-bottom: 14px; }
+nav#primary-nav a { text-decoration: none; }
+nav#primary-nav .expanded { left: auto; }
+nav#primary-nav form { float: right; }
+nav#primary-nav form label { text-transform: uppercase; font-size: 1.8em; line-height: 1.3em; }
+nav#primary-nav form input[type=text] { width: 150px; padding-top: 2px; padding-bottom: 2px; }
+nav#primary-nav form input { margin-top: 0px; margin-bottom: 0px; margin-right: 0px; }
+nav#primary-nav ul { z-index: 10; text-align: left; text-transform: uppercase; margin: 0; }
+nav#primary-nav ul li { float: left; display: block; font-size: 1.8em; line-height: 1.3em; }
+nav#primary-nav ul li a { margin-left: 20px; margin-right: 20px; }
+nav#primary-nav ul li a.active { color: #cc9a50; }
+nav#primary-nav ul li a:link.hover { color: #cc9a50; }
+nav#primary-nav ul li ul { display: none; z-index: 10; position: absolute; width: auto; margin-bottom: 0; background-color: rgba(249, 247, 244, 0.8); }
+nav#primary-nav ul li ul li { font-size: 0.8em; margin-left: 0; float: none; display: inline; }
+nav#primary-nav ul li ul li ul { margin-bottom: 0; }
+nav#primary-nav ul li ul li ul li { margin-left: 0; margin-bottom: !border_radius; margin-top: 5px; float: none; display: block; }
+nav#primary-nav ul li ul li ul li:last-of-type { padding-bottom: 5px; }
+
+nav.pagination { text-align: center; }
+nav.pagination ul li { display: inline-block; width: 20px; font-size: 1.2em; line-height: 1.3em; }
+nav.pagination ul li + li { margin-left: 3px; }
+nav.pagination ul li[rel="next"], nav.pagination ul li[rel="prev"] { font-family: Helvetica, Arial, sans-serif; }
+nav.pagination ul li[rel="next"] a, nav.pagination ul li[rel="prev"] a { text-decoration: none; }
+nav.pagination ul li a.mark { text-decoration: none; }
 
 #content { min-height: 550px; }
 #content #slides { margin: auto; width: 1200px; height: 550px; overflow: hidden; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; background-color: #f9f7f4; }

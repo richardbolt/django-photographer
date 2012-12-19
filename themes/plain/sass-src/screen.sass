@@ -53,7 +53,7 @@ em
     font-style: italic
 
 
-nav
+nav#primary-nav
     width= !main_width
     height: 29px
     margin:
@@ -122,6 +122,23 @@ nav
                             display: block
                             &:last-of-type
                                 padding-bottom= !border_radius
+
+nav.pagination
+    text-align: center
+    ul
+        li
+            display: inline-block
+            width: 20px
+            font-size: 1.2em
+            line-height: 1.3em
+            + li
+                margin-left: 3px
+            &[rel="next"], &[rel="prev"]
+                font-family: Helvetica, Arial, sans-serif
+                a
+                    text-decoration: none
+            a.mark
+                text-decoration: none
 
 #content
     min-height= !slide_height
