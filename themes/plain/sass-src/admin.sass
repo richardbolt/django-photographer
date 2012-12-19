@@ -14,7 +14,12 @@
         font-size: 1.0em
         color= !text_color
         a
-            color= !link_color
+            &:link
+                color= !link_color
+            &:visited
+                color= !link_color
+            &:hover
+                color= !link_hover_color
         padding:
             top: 11px
     #branding
@@ -36,6 +41,13 @@
             &.first
                 a
                     background= "transparent" image_url("home_16x16.png") "no-repeat" 3px 2px
+            a
+                &:link
+                    color= !link_color
+                &:visited
+                    color= !link_color
+                &:hover
+                    color= !link_hover_color
 
 #content
     h1
