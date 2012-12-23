@@ -37,7 +37,7 @@ em { font-style: italic; }
 nav#primary-nav { width: 1200px; height: 29px; margin-top: 14px; margin-left: auto; margin-right: auto; margin-bottom: 14px; }
 nav#primary-nav a { text-decoration: none; }
 nav#primary-nav .expanded { left: auto; }
-nav#primary-nav form { float: right; }
+nav#primary-nav form { float: right; margin-right: 20px; }
 nav#primary-nav form label { text-transform: uppercase; font-size: 1.8em; line-height: 1.3em; }
 nav#primary-nav form input[type=text] { width: 150px; padding-top: 2px; padding-bottom: 2px; }
 nav#primary-nav form input { margin-top: 0px; margin-bottom: 0px; margin-right: 0px; }
@@ -72,10 +72,15 @@ nav.pagination ul li a.mark { text-decoration: none; }
 #content #contact .contact-sidebar { width: 500px; float: left; margin-bottom: 29px; }
 #content #contact .contact-sidebar img { width: 100%; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
 #content .hfeed.newsfeed, #content .hentry { margin: auto; width: 1200px; }
-#content .hfeed.newsfeed header, #content .hentry header { text-align: left; margin-top: 2em; margin-bottom: 1em; }
-#content .hfeed.newsfeed header h2.entry-title, #content .hfeed.newsfeed header h1.entry-title, #content .hentry header h2.entry-title, #content .hentry header h1.entry-title { margin-top: 0; margin-bottom: 0; margin-right: 1em; margin-left: 20px; float: left; }
+#content .hfeed.newsfeed header, #content .hentry header { text-align: left; line-height: 1.5em; margin-top: 3em; margin-bottom: 1.5em; }
+#content .hfeed.newsfeed header h2, #content .hfeed.newsfeed header h1, #content .hentry header h2, #content .hentry header h1 { display: inline-block; }
+#content .hfeed.newsfeed header h2.entry-title, #content .hfeed.newsfeed header h1.entry-title, #content .hentry header h2.entry-title, #content .hentry header h1.entry-title { margin-left: 20px; margin-right: 20px; }
 #content .hfeed.newsfeed header h2 a, #content .hfeed.newsfeed header h1 a, #content .hentry header h2 a, #content .hentry header h1 a { color: #cc9a50; }
-#content .hfeed.newsfeed .entry-content, #content .hentry .entry-content { clear: both; }
+#content .hfeed.newsfeed header h2:first-of-type, #content .hfeed.newsfeed header h1:first-of-type, #content .hentry header h2:first-of-type, #content .hentry header h1:first-of-type { margin-top: 1em; }
+#content .hfeed.newsfeed header span, #content .hentry header span { display: inline-block; }
+#content .hfeed.newsfeed header time, #content .hentry header time { display: inline-block; margin-left: 10px; }
+#content .hfeed.newsfeed .entry-content, #content .hentry .entry-content { clear: both; line-height: 1.5em; text-align: left; }
+#content .hfeed.newsfeed .entry-content p, #content .hentry .entry-content p { max-width: 600px; margin-left: 20px; }
 #content .hfeed.newsfeed .entry-content img, #content .hentry .entry-content img { border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; max-width: 1200px; }
 #content .hfeed.newsfeed .entry-content iframe, #content .hentry .entry-content iframe { border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
 #content #search-wrapper { margin: auto; width: 1200px; }
@@ -84,8 +89,8 @@ nav.pagination ul li a.mark { text-decoration: none; }
 #content #search-wrapper #search ul li { padding-top: 5px; padding-bottom: 10px; }
 #content #search-wrapper #search ul li a { font-size: 1.2em; color: #cc9a50; }
 
-footer { clear: both; width: 1200px; height: 29px; margin: auto; }
+footer { clear: both; height: 100px; width: 1200px; text-align: left; margin: auto; position: relative; }
 footer a { text-decoration: none; }
-footer ul { text-align: left; text-transform: uppercase; }
-footer ul li { float: left; display: block; margin-left: 20px; margin-right: 20px; }
-footer ul li:first-of-type { margin-right: 800px; }
+footer p { display: inline-block; margin-top: 30px; margin-left: 20px; }
+footer ul { text-align: left; text-transform: uppercase; position: absolute; right: 0; display: inline-block; margin-top: 30px; }
+footer ul li { display: inline-block; margin-left: 20px; margin-right: 20px; }

@@ -67,6 +67,7 @@ nav#primary-nav
         left: auto
     form
         float: right
+        margin-right= !page_side_margin
         label
             text-transform: uppercase
             font-size: 1.8em
@@ -93,8 +94,8 @@ nav#primary-nav
             line-height: 1.3em
             a
                 margin:
-                    left: 20px
-                    right: 20px
+                    left= !nav_side_margin
+                    right= !nav_side_margin
                 &.active
                     color= !link_hover_color
                 &:link.hover
@@ -191,27 +192,39 @@ nav.pagination
                 +border-radius(!border_radius)
     
 
-    // blog
+    // Blog
     .hfeed.newsfeed, .hentry
         margin: auto
         width= !main_width
         header
             text-align: left
+            line-height: 1.5em
             h2, h1
+                display: inline-block
                 &.entry-title
                     margin:
-                        top: 0
-                        bottom: 0
-                        right: 1em
-                        left: 20px
-                    float: left
+                        left= !page_side_margin
+                        right= !page_side_margin
                 a
                     color= !link_hover_color
+            h2, h1
+                &:first-of-type
+                    margin-top: 1em
+            span
+                display: inline-block
+            time
+                display: inline-block
+                margin-left= !page_side_margin / 2
             margin:
-                top: 2em
-                bottom: 1em
+                top: 3em
+                bottom: 1.5em
         .entry-content
             clear: both
+            line-height: 1.5em
+            text-align: left
+            p
+                max-width= !blog_width
+                margin-left= !page_side_margin
             img
                 +border-radius(!border_radius)
                 max-width= !main_width
@@ -224,8 +237,8 @@ nav.pagination
         #search
             text-align: left
             padding:
-                left: 20px
-                right: 20px
+                left= !page_side_margin
+                right= !page_side_margin
             h1
                 text-transform: uppercase
             ul
@@ -240,21 +253,30 @@ nav.pagination
 
 footer
     clear: both
+    height: 100px
     width= !main_width
-    height: 29px
+    text-align: left
     margin: auto
+    position: relative
     a
         text-decoration: none
+    p
+        display: inline-block
+        margin:
+            top: 30px
+            left= !page_side_margin
     ul
         text-align: left
         text-transform: uppercase
+        position: absolute
+        right: 0
+        display: inline-block
+        margin:
+            top: 30px
         li
-            float: left
-            display: block
+            display: inline-block
             margin:
-                left: 20px
-                right: 20px
-            &:first-of-type
-                margin-right: 800px
+                left= !nav_side_margin
+                right= !nav_side_margin
  
         
