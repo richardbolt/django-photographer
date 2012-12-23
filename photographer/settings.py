@@ -82,7 +82,7 @@ STATIC_ROOT = "/%s/" % STATIC_S3_PATH
 STATIC_URL = '//s3.amazonaws.com/%s/static/' % AWS_STORAGE_BUCKET_NAME
 ADMIN_MEDIA_PREFIX = STATIC_URL+'admin/'  # Deprecated but required for django-admin-tools (temporarily).
 
-if DEBUG:
+if not (AWS_STORAGE_BUCKET_NAME and AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY):
     # For debug when we don't want to have to use S3.
     DEFAULT_FILE_STORAGE = DEFAULT_SETTINGS.DEFAULT_FILE_STORAGE
     STATICFILES_STORAGE = DEFAULT_SETTINGS.STATICFILES_STORAGE
